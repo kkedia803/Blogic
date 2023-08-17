@@ -11,7 +11,7 @@ export default function SinglePost() {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://blogic2.onrender.com/post/${id}`)
             .then(response => {
                 response.json().then(postInfo => {
                     setPostInfo(postInfo)
@@ -40,7 +40,7 @@ export default function SinglePost() {
                 <div className="author">by @{postInfo.author.userName}</div>
             )}
             <div className="image">
-                <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+                <img src={`https://blogic2.onrender.com/${postInfo.cover}`} alt="" />
             </div>
             <div className="content" dangerouslySetInnerHTML={{ __html: postInfo.content }} style={{padding: '20px'}} />
 

@@ -12,7 +12,7 @@ export default function Login() {
     async function Login(ev) {
         ev.preventDefault();
 
-        const response = await fetch('http://localhost:4000/login', {
+        const response = await fetch('https://blogic2.onrender.com/login', {
             method: 'POST',
             body: JSON.stringify({ userName, password }),
             headers: { 'Content-Type': 'application/json' },

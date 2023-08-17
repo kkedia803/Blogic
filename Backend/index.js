@@ -14,7 +14,7 @@ const secret = '1k234567K@'
 const uploadMiddleware = multer({ dest: 'upload/' });
 const fs = require('fs');
 
-app.use(cors({ credentials: true, origin: 'https://blogic.vercel.app/' }));
+app.use(cors({ credentials: true, origin: 'https://blogic.vercel.app' }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/upload', express.static(__dirname + '/upload'))

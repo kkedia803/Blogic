@@ -60,19 +60,19 @@ app.post('/login', async (req, res) => {
     }
 })
 
-app.get('/profile', (req, res) => {
-    const { token } = req.cookies;
+// app.get('/profile', (req, res) => {
+//     const { token } = req.cookies;
 
-    // if (!token) {
-    //     // return res.status(401).json({ message: 'Token missing or invalid' });
-    //     return res.redirect('http://localhost:3000');
-    // }
+//     // if (!token) {
+//     //     // return res.status(401).json({ message: 'Token missing or invalid' });
+//     //     return res.redirect('http://localhost:3000');
+//     // }
 
-    jwt.verify(token, secret, {}, (err, info) => {
-        if (err) throw (err);
-        res.json(info);
-    })
-})
+//     jwt.verify(token, secret, {}, (err, info) => {
+//         if (err) throw (err);
+//         res.json(info);
+//     })
+// })
 
 app.post('/logout', (req, res) => {
     res.cookie('token', '').json('ok')
